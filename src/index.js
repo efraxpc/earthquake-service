@@ -3,9 +3,9 @@ const app = require('./app');
 const { createConfig } = require('./config/config');
 
 async function execute() {
-  const configPath = path.join(__dirname, './configs/.env');
+  const configPath = path.join(__dirname, '../configs/.env');
   const appConfig = createConfig(configPath);
-  
+
 const server = app.listen(appConfig.port, () => {
     console.log('earthquake service started', { port: appConfig.port });
   });
